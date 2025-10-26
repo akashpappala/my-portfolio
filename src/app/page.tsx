@@ -19,8 +19,8 @@ export default function Home() {
       >
         {/* Profile Image */}
         <img
-          src="file:///Users/akashpappala/Downloads/akash%20image.jpg"
-          alt="Akash Pappala"
+          src="/profile.jpg"
+          alt="Portrait of Akash Pappala, software engineer"
           className="mx-auto mb-6 rounded-full object-cover h-32 w-32 shadow-lg border-4 border-indigo-300"
         />
         <h1 className="text-5xl font-extrabold mb-4 text-indigo-900 drop-shadow-lg">
@@ -32,63 +32,72 @@ export default function Home() {
         <p className="text-md text-gray-600 mb-8 max-w-xl mx-auto">
           I build performant, accessible web apps using modern tech. Open for full-time software engineering roles.
         </p>
-        <div className="flex flex-wrap justify-center gap-6 mb-8">
-          <a
-            href="https://github.com/akashpappala"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/akash-pappala-695708256/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="mailto:akashpappala2@gmail.com"
-            className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
-          >
-            Email
-          </a>
-          <a
-            href="https://leetcode.com/u/akash_pappala/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
-          >
-            LeetCode
-          </a>
-          <a
-            href="https://www.hackerrank.com/profile/22A31A05C2"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
-          >
-            HackerRank
-          </a>
-          <a
-            href="https://x.com/AkashPappala"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
-          >
-            Twitter/X
-          </a>
-        </div>
+        <nav aria-label="Social and Coding Profiles" className="mb-8">
+          <div className="flex flex-wrap justify-center gap-6">
+            <a
+              href="https://github.com/akashpappala"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
+              aria-label="GitHub Profile"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/akash-pappala-695708256/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
+              aria-label="LinkedIn Profile"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:akashpappala2@gmail.com"
+              className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
+              aria-label="Email Akash"
+            >
+              Email
+            </a>
+            <a
+              href="https://leetcode.com/u/akash_pappala/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
+              aria-label="LeetCode Profile"
+            >
+              LeetCode
+            </a>
+            <a
+              href="https://www.hackerrank.com/profile/22A31A05C2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
+              aria-label="HackerRank Profile"
+            >
+              HackerRank
+            </a>
+            <a
+              href="https://x.com/AkashPappala"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
+              aria-label="Twitter/X Profile"
+            >
+              Twitter/X
+            </a>
+          </div>
+        </nav>
         <a
           href="mailto:akashpappala2@gmail.com"
           className="bg-indigo-600 text-white px-6 py-2 rounded shadow font-semibold hover:bg-indigo-700 transition"
+          aria-label="Contact Akash Pappala by Email"
         >
           Contact Me
         </a>
       </motion.section>
 
-      {/* Projects Section (unchanged, scroll-animated) */}
+      {/* Projects Section */}
       <motion.section
         initial="hidden"
         whileInView="visible"
@@ -117,6 +126,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-indigo-600 font-semibold hover:underline"
+              aria-label="Portfolio Website GitHub Repository"
             >
               GitHub
             </a>
@@ -139,6 +149,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-indigo-600 font-semibold hover:underline"
+              aria-label="AI Agent Web UI GitHub Repository"
             >
               GitHub
             </a>
@@ -161,6 +172,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-indigo-600 font-semibold hover:underline"
+              aria-label="Travel Agency Booking System GitHub Repository"
             >
               GitHub
             </a>
@@ -170,4 +182,5 @@ export default function Home() {
     </main>
   );
 }
+
 
