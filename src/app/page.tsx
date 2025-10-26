@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  // Animation variants for fade-in
   const fadeInVariant = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
@@ -18,6 +17,12 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="text-center py-12"
       >
+        {/* Profile Image */}
+        <img
+          src="file:///Users/akashpappala/Downloads/akash%20image.jpg"
+          alt="Akash Pappala"
+          className="mx-auto mb-6 rounded-full object-cover h-32 w-32 shadow-lg border-4 border-indigo-300"
+        />
         <h1 className="text-5xl font-extrabold mb-4 text-indigo-900 drop-shadow-lg">
           Akash Pappala
         </h1>
@@ -66,6 +71,14 @@ export default function Home() {
           >
             HackerRank
           </a>
+          <a
+            href="https://x.com/AkashPappala"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 hover:text-indigo-800 font-semibold transition"
+          >
+            Twitter/X
+          </a>
         </div>
         <a
           href="mailto:akashpappala2@gmail.com"
@@ -75,7 +88,7 @@ export default function Home() {
         </a>
       </motion.section>
 
-      {/* Projects Section */}
+      {/* Projects Section (unchanged, scroll-animated) */}
       <motion.section
         initial="hidden"
         whileInView="visible"
@@ -157,3 +170,4 @@ export default function Home() {
     </main>
   );
 }
+
