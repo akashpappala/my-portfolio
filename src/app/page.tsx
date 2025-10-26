@@ -1,10 +1,23 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
+  // Animation variants for fade-in
+  const fadeInVariant = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <main className="flex flex-col min-h-screen justify-center items-center bg-gradient-to-br from-indigo-100 via-white to-indigo-50">
       {/* Hero Section */}
-      <section className="text-center py-12">
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={fadeInVariant}
+        transition={{ duration: 0.8 }}
+        className="text-center py-12"
+      >
         <h1 className="text-5xl font-extrabold mb-4 text-indigo-900 drop-shadow-lg">
           Akash Pappala
         </h1>
@@ -60,10 +73,17 @@ export default function Home() {
         >
           Contact Me
         </a>
-      </section>
+      </motion.section>
 
       {/* Projects Section */}
-      <section className="w-full max-w-3xl px-4 py-8 mx-auto">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-100px' }}
+        variants={fadeInVariant}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="w-full max-w-3xl px-4 py-8 mx-auto"
+      >
         <h2 className="text-3xl font-bold text-indigo-900 mb-6 text-center">Projects</h2>
         <div className="flex flex-col gap-8">
           {/* Personal Portfolio Website */}
@@ -133,7 +153,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
     </main>
   );
 }
